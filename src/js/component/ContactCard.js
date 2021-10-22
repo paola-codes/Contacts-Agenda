@@ -15,8 +15,8 @@ export const ContactCard = props => {
 						width="40%"
 					/>
 				</div>
-				<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
-					<div className=" float-right">
+				<div className="col-12 col-sm-6 col-md-9 text-center text-sm-start">
+					<div className=" float-end">
 						<Link to={`/edit/${props.contact.id}`}>
 							<button className="btn">
 								<i className="fas fa-pencil-alt" />
