@@ -63,15 +63,15 @@ export const AddContact = props => {
 					</div>
 					<button
 						type="button"
-						className="btn btn-primary form-control"
+						className="btn btn-primary btn-lg my-3 me-3"
 						onClick={() => {
 							actions.addContacts(newContact);
 							props.history.push("/");
 						}}>
-						Save
+						Save!
 					</button>
-					<Link className="mt-3 w-100 text-center" to="/">
-						Or get back to contacts
+					<Link className="mt-3 w-100 text-center fs-4" to="/">
+						Back to contacts
 					</Link>
 				</form>
 			</div>

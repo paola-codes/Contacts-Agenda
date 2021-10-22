@@ -1,4 +1,4 @@
-const getState = ({ getStore, setStore }) => {
+const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			contacts: []
@@ -24,16 +24,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => {
 						if (response.ok) {
-							fetch("https://assets.breatheco.de/apis/fake/contact/agenda/Paola")
-								.then(response => {
-									if (response.ok) {
-										return response.json();
-									} else {
-										return new Error("Error fetching the api");
-									}
-								})
-								.then(data => console.log("Success:", data))
-								.catch(err => console.error("Error:", err));
+							getActions().getContacts();
 						}
 					})
 					.catch(err => console.error("Error:", err));
@@ -47,16 +38,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(response => {
 						if (response.ok) {
-							fetch("https://assets.breatheco.de/apis/fake/contact/agenda/Paola")
-								.then(response => {
-									if (response.ok) {
-										return response.json();
-									} else {
-										return new Error("Error fetching the api");
-									}
-								})
-								.then(data => console.log("Success:", data))
-								.catch(err => console.error("Error:", err));
+							getActions().getContacts();
 						}
 					})
 					.catch(err => console.error("Error:", err));
@@ -64,17 +46,7 @@ const getState = ({ getStore, setStore }) => {
 			deleteContacts: id => {
 				fetch(`https://assets.breatheco.de/apis/fake/contact/${id}`, {
 					method: "DELETE"
-				}).then(response => {
-					if (response.ok) {
-						fetch("https://assets.breatheco.de/apis/fake/contact/agenda/Paola").then(response => {
-							if (response.ok) {
-								return response.json();
-							} else {
-								return new Error("Error fetching the api");
-							}
-						});
-					}
-				});
+				}).then(() => getActions().getContacts());
 			}
 		}
 	};

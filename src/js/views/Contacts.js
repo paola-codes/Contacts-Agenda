@@ -13,12 +13,10 @@ export const Contacts = () => {
 		id: null
 	});
 
-	useEffect(actions.getContacts, []);
-
 	return (
-		<div className="container">
+		<div className="container pt-4 pb-5">
 			<div>
-				<h1 className="text-center mt-4 pt-4 mb-2">{"Paola's Agenda"}</h1>
+				<h1 className="text-center p-0 m-0">{"Paola's Agenda"}</h1>
 				<p className="text-right my-3">
 					<Link className="btn btn-success" to="/add">
 						Add New Contact!
