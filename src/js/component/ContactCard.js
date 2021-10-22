@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -10,7 +10,7 @@ export const ContactCard = props => {
 				<div className="col-12 col-sm-6 col-md-3 px-0">
 					<img
 						src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FCoOdTV7WEAETDYF.jpg%3Alarge&f=1&nofb=1"
-						alt="Mike Anamendolla"
+						alt="Pusheen Cat"
 						className="rounded-circle mt-2 mx-auto d-block img-fluid"
 						width="40%"
 					/>
