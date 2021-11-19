@@ -10,8 +10,7 @@ export const AddContact = props => {
 		full_name: null,
 		email: null,
 		phone: null,
-		address: null,
-		agenda_slug: "Paola"
+		address: null
 	});
 
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });

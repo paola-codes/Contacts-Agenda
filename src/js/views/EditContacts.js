@@ -7,7 +7,7 @@ export const EditContact = props => {
 	const { actions, store } = useContext(Context);
 
 	const actualContact = store.contacts.find(contact => {
-		return contact.id === props.match.params.id;
+		return contact.id == props.match.params.id;
 	});
 
 	const [updatedContact, setUpdatedContact] = useState({ ...actualContact });
